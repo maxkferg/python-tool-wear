@@ -5,9 +5,12 @@ This repository contains the tool wear data used in our paper
 Signals, with Application to Tool Condition Monitoring"](http://ws680.nist.gov/publication/get_pdf.cfm?pub_id=922857)
 
 ## Data
-The time series audio data for each tool is in `data/Audio Data`
-The time series acceleration data for each tool is in `data/Vibration Data`
-Metadata for each tool, including the tool wear and tool cut type is at `data/Metadata`
+The time series audio data for each tool is in `data/Audio Data`.
+
+The time series acceleration data for each tool is in `data/Vibration Data`.
+
+Metadata for each tool, including the tool wear and tool cut type is at `data/Metadata`.
+
 All files without a file extension are plain text (space separated)
 
 ## Usage
