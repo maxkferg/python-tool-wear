@@ -85,7 +85,7 @@ def get_max_distance_for_audio_cuts(cuts):
 			distance = sum(spectra-reference)
 			distances.append(distance)
 		except:
-			print "Skipping {0}".format(i)
+			print("Skipping {0}".format(i))
 	return distances
 
 
@@ -103,7 +103,7 @@ def get_max_distance_for_vibration_cuts(cuts):
 			distance = sum(spectra-reference)
 			distances.append(distance)
 		except:
-			print "Skipping {0}".format(i)
+			print("Skipping {0}".format(i))
 	return distances
 
 

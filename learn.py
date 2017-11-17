@@ -23,7 +23,7 @@ def scale_linear_bycolumn(rawpoints, high=1.0, low=0.0):
 	global scale_mins
 	global scale_maxs
 	if scale_mins is None or scale_maxs is None:
-		print "Calculating column scales"
+		print("Calculating column scales")
 		scale_mins = np.min(rawpoints, axis=0)
 		scale_maxs = np.max(rawpoints, axis=0)
 	rng = scale_maxs - scale_mins
@@ -44,12 +44,12 @@ def recursive_predict(model,x):
 	return np.array(yhat)
 
 
-print "Calculating features"
+print("Calculating features")
 trainingX,trainingY = featurize_tools(train)
 testingX,testingY = featurize_tools(test)
 
 # Normalize the columns on a 0-1 scale
-#print "Normalizing columns"
+#print("Normalizing columns"
 ##trainingX = scale_linear_bycolumn(trainingX)
 #testingX = scale_linear_bycolumn(testingX)
 
@@ -62,7 +62,7 @@ for rownum in range(trainingX.shape[0]):
 	plt.show()
 
 
-print "Examining correlation"
+print("Examining correlation")
 energy = np.sum(trainingX,axis=1)
 toolwear = trainingY
 plt.figure()
@@ -83,9 +83,9 @@ model = GaussianProcessRegressor(kernel=None, alpha=1e-10, optimizer='fmin_l_bfg
 model.fit(trainingX, trainingY)
 
 # Self test the SVR model
-print "Predicting"
+print("Predicting")
 predict = model.predict(trainingX)
-print "RMSE on training {0}".format(rmse(predict,trainingY))
+print("RMSE on training {0}".format(rmse(predict,trainingY)))
 
 plt.figure()
 plt.scatter(trainingY,predict)
@@ -94,7 +94,7 @@ plt.xlabel('Actual Tool Wear')
 
 # Test on testing set
 predict = model.predict(testingX)
-print "RMSE on testing {0}".format(rmse(predict,testingY))
+print("RMSE on testing {0}".format(rmse(predict,testingY)))
 
 plt.figure()
 plt.scatter(testingY,predict)

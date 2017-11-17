@@ -30,7 +30,7 @@ titlemap = {
 
 # Plot the vibration without labels
 # Designed for experiment 28
-print "Plotting vibration time series"
+print("Plotting vibration time series")
 shift = 10 # Seconds
 plt.figure(figsize=SIZE)
 plt.plot(td.vibration_time-shift, td.vibration[:,0], color=BLUE)
@@ -44,7 +44,7 @@ plt.ylim((-0.7, 0.7))
 # Plot the vibration with labels
 # Designed for experiment 28
 
-print "Plotting vibration time series"
+print("Plotting vibration time series")
 tmax = 304
 tstart = 0
 shift = 10 # Seconds
@@ -68,11 +68,11 @@ plt.legend([handles[0],handles[3],handles[1]], titlemap.values())
 
 
 
-print "Plotting vibration time series 0"
+print("Plotting vibration time series 0")
 plt.figure()
 plt.plot(cut.vibration_time, cut.vibration[:,0])
 
-print "Plotting vibration time series 1"
+print("Plotting vibration time series 1")
 plt.figure()
 plt.plot(cut.vibration_time, cut.vibration[:,1])
 
@@ -113,5 +113,5 @@ plt.xlabel(r'Generic Feature Vector Component, $j$')
 plt.ylabel(r'Generic Feature Vector Magnitude, $x^{i}_j$')
 plt.legend(titlemap.values())
 
-print "Showing plots"
+print("Showing plots")
 plt.show()
